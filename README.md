@@ -21,7 +21,7 @@ will be migrated to this repo.
 ```javascript
 const gradients = require('uigradients.gradients').gradients;
 
-const colors = g.gradients['Sulphur'];  // colors = ['#CAC531', '#F3F9A7']
+const colors = gradients['Sulphur'];  // colors = ['#CAC531', '#F3F9A7']
 ```
 
 
