@@ -5,7 +5,16 @@
   "main": "dist/index.js",
   "scripts": {
     "compile": "node tools/generate-all-the-things.js",
-    "test": "mocha"
+    "test": "npm run pre-check && npm run compile && npm run check",
+    "pre-check:lint": "eslint gradients.json",
+    "pre-check:test": "mocha pre-test",
+    "pre-check": "npm run pre-check:lint && npm run pre-check:test",
+    "check:test": "mocha",
+    "check:lint:js": "eslint tools/**/*.js test/**/*.js pre-test/**/*.js ./.eslintrc.js --ignore-pattern '!.eslintrc.js'",
+    "check:lint:markdown": "remark --quiet --no-stdout *.md && eslint *.md",
+    "check:lint": "npm run check:lint:js && npm run check:lint:markdown",
+    "check": "npm run check:lint && npm run check:test",
+    "help": "mdy NPM-HELP.md"
   },
   "keywords": [
     "gradient",
@@ -13,13 +22,26 @@
   ],
   "author": "",
   "license": "CC0-1.0",
+  "remarkConfig": {
+    "plugins": [
+      "remark-preset-lint-recommended"
+    ]
+  },
   "dependencies": {
     "array-unique": "0.3.2"
   },
   "devDependencies": {
     "chai": "4.1.0",
     "color": "2.0.0",
+    "eslint": "4.3.0",
+    "eslint-config-airbnb-base": "11.3.1",
+    "eslint-plugin-import": "2.7.0",
+    "eslint-plugin-markdown": "1.0.0-beta.6",
+    "mdy": "1.0.7",
     "mocha": "3.4.2",
-    "mz": "2.6.0"
+    "mz": "2.6.0",
+    "nodecat": "1.0.0",
+    "remark-cli": "4.0.0",
+    "remark-preset-lint-recommended": "3.0.0"
   }
 }

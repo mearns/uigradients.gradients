@@ -1,6 +1,5 @@
 
 const gradients = require('../gradients.json');
-const fs = require('mz/fs');
 const expect = require('chai').expect;
 const Color = require('color');
 
@@ -17,16 +16,16 @@ describe('gradients.json', () => {
   });
 
   gradients.forEach((gradient) => {
-    describe(`Gradient ${gradient}`, () => {
+    describe(`Gradient ${gradient.name}`, () => {
       it('should define a name', () => {
         expect(gradient).to.have.a.property('name').which.is.a('string');
-      })
+      });
 
       it('should define an array of at least one color', () => {
         expect(gradient)
           .to.have.a.property('colors')
-            .which.is.an.instanceOf(Array)
-            .and.has.length.not.below(1);
+          .which.is.an.instanceOf(Array)
+          .and.has.length.not.below(1);
       });
 
       it('should define only valid colors', () => {
@@ -37,8 +36,7 @@ describe('gradients.json', () => {
 
       it('should have no superfluous properties', () => {
         expect(gradient).to.have.keys('name', 'colors');
-      })
+      });
     });
   });
-
 });

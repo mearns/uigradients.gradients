@@ -1,16 +1,21 @@
+/* eslint no-console: off */
+
 const gradients = require('../gradients.json');
 const fs = require('mz/fs');
 const Color = require('color');
 
-const gradientMap = gradients.reduce((dict, gradient) => {
-        dict[gradient.name] = gradient.colors.map((c) => Color(c).hex());
-        return dict;
-    }, {});
+function colorToHex(c) {
+  return Color(c).hex();
+}
 
-const js = `module.exports = {
-  gradients: ${JSON.stringify(gradientMap)}
-};
-`;
+function addGradientsToMap(map, gradient) {
+  map[gradient.name] = gradient.colors.map(colorToHex); // eslint-disable-line no-param-reassign
+  return map;
+}
+
+const gradientMap = gradients.reduce(addGradientsToMap, {});
+
+const js = `module.exports={gradients:${JSON.stringify(gradientMap)}};`;
 
 fs.mkdir('dist/')
   .catch((error) => {
@@ -25,4 +30,3 @@ fs.mkdir('dist/')
   .catch((error) => {
     console.error(`Error occurred during transcription: ${error.message}`);
   });
-

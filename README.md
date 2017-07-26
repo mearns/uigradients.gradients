@@ -20,8 +20,22 @@ will be migrated to this repo.
 
 ```javascript
 const gradients = require('uigradients.gradients').gradients;
-
-const colors = gradients['Sulphur'];  // colors = ['#CAC531', '#F3F9A7']
+console.log(gradients['Purple Love']); // => ["#cc2b5e", "#753a88"]
 ```
 
+## Contributing
 
+**For now, please continue to make contributions to the original [Ghosh/uiGradients](https://github.com/Ghosh/uiGradients) project.**
+
+If you want to add a new gradient, please add it to `gradients.json`, following the existing format.
+Each gradient should have exactly two properties: a `name` and a `colors` array. The name is the
+name of the gradient and must be unique in the file. The elements of `colors` should be specified
+in any format that can be parsed by the [color](https://www.npmjs.com/package/color) package.
+
+The `.editorconfig` file describes what formatting you should use. If your editor supports
+[EditorConfig](http://editorconfig.org/), you should be all set. Otherwise, just make sure:
+*   Spaces, not tabs
+*   Two spaces per level of indent
+
+To make sure your submission can be accepted, run `npm run test` and address any errors
+reported.
