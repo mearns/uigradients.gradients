@@ -1,0 +1,25 @@
+{
+  "name": "uigradients.gradients",
+  "version": "2.0.0",
+  "description": "Community contributed collection of beautiful multi-color gradients.",
+  "main": "dist/index.js",
+  "scripts": {
+    "compile": "node tools/generate-all-the-things.js",
+    "test": "mocha"
+  },
+  "keywords": [
+    "gradient",
+    "gradients"
+  ],
+  "author": "",
+  "license": "CC0-1.0",
+  "dependencies": {
+    "array-unique": "0.3.2"
+  },
+  "devDependencies": {
+    "chai": "4.1.0",
+    "color": "2.0.0",
+    "mocha": "3.4.2",
+    "mz": "2.6.0"
+  }
+}
