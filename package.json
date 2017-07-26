@@ -1,6 +1,6 @@
 {
   "name": "uigradients.gradients",
-  "version": "2.0.0",
+  "version": "2.0.0-1",
   "description": "Community contributed collection of beautiful multi-color gradients.",
   "main": "dist/index.js",
   "scripts": {
