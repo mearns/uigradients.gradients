@@ -14,7 +14,7 @@
     "check:lint:markdown": "remark --quiet --no-stdout *.md && eslint *.md",
     "check:lint": "npm run check:lint:js && npm run check:lint:markdown",
     "check": "npm run check:lint && npm run check:test",
-    "help": "mdy NPM-HELP.md"
+    "help": "nodecat NPM-HELP"
   },
   "keywords": [
     "gradient",
@@ -37,7 +37,6 @@
     "eslint-config-airbnb-base": "11.3.1",
     "eslint-plugin-import": "2.7.0",
     "eslint-plugin-markdown": "1.0.0-beta.6",
-    "mdy": "1.0.7",
     "mocha": "3.4.2",
     "mz": "2.6.0",
     "nodecat": "1.0.0",
