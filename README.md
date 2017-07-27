@@ -2,6 +2,8 @@
 
 A package of community contributed gradients.
 
+[![Build Status](https://travis-ci.org/mearns/uigradients.gradients.svg?branch=master)](https://travis-ci.org/mearns/uigradients.gradients)
+
 This is taken directly from [Ghosh/uiGradients](https://github.com/Ghosh/uiGradients);
 the intent of this package is to separate the gradients themselves from the
 [uigradients.com](http://uigradients.com/) website, which is currently hosted in
