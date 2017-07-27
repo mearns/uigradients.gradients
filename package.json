@@ -1,6 +1,6 @@
 {
   "name": "uigradients.gradients",
-  "version": "2.0.2",
+  "version": "2.0.2-1",
   "description": "Community contributed collection of beautiful multi-color gradients.",
   "main": "dist/index.js",
   "scripts": {
@@ -21,12 +21,16 @@
     "gradient",
     "gradients"
   ],
-  "author": "",
+  "author": "Brian Mearns <https://github.com/mearns/>",
   "license": "CC0-1.0",
   "remarkConfig": {
     "plugins": [
       "remark-preset-lint-recommended"
     ]
+  },
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/mearns/uigradients.gradients.git"
   },
   "dependencies": {},
   "devDependencies": {
