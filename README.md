@@ -1,8 +1,13 @@
+[![Build Status](https://travis-ci.org/mearns/uigradients.gradients.svg?branch=master)](https://travis-ci.org/mearns/uigradients.gradients)
+![license](https://img.shields.io/npm/l/uigradients.gradients.svg)
+![npm downloads per week](https://img.shields.io/npm/dw/uigradients.gradients.svg)
+[![npm package version](https://img.shields.io/npm/v/uigradients.gradients.svg)](https://www.npmjs.com/package/uigradients.gradients)
+
+[![NPM](https://nodei.co/npm/uigradients.gradients.png?downloads=true)](https://nodei.co/npm/uigradients.gradients/)
+
 # uigradients
 
 A package of community contributed gradients.
-
-[![Build Status](https://travis-ci.org/mearns/uigradients.gradients.svg?branch=master)](https://travis-ci.org/mearns/uigradients.gradients)
 
 This is taken directly from [Ghosh/uiGradients](https://github.com/Ghosh/uiGradients);
 the intent of this package is to separate the gradients themselves from the
