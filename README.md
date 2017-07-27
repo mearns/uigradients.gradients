@@ -14,6 +14,8 @@ will be migrated to this repo.
 
 ## Install
 
+This package can be installed from [npm](https://www.npmjs.com/package/uigradients.gradients):
+
 ```console
 > npm install --save uigradients.gradients
 ```
